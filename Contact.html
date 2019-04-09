@@ -1,0 +1,310 @@
+<!doctype <!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Yuanqi(Yuki) Yang</title>
+    <style>
+        body {
+    padding-top: 3.5em;
+}
+body, input, select, textarea {
+    font-size: 12pt;
+}
+body, input, select, textarea {
+    color: #646464;
+    font-family: "Source Sans Pro", Helvetica, sans-serif;
+    font-size: 14pt;
+    font-weight: 400;
+    line-height: 1.75;
+}
+body {
+    background: #f4f4f4;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color:white;
+}
+
+.topnav a {
+  float: left;
+  color:black;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  font-size: 17px;
+}
+
+.topnav a:hover {
+  background-color:black;
+  color: white;
+}
+
+.topnav a.active {
+  background-color:black;
+  color: white;
+}
+hgroup, menu, nav, section {
+    display: block;
+}
+#main {
+    -moz-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    flex-grow: 1;
+    width: 50%;
+    float: right;
+}
+
+.post {
+    padding: 3em 3em 1em 3em;
+    background: #ffffff;
+    border: solid 1px rgba(160, 160, 160, 0.3);
+    margin: 0 0 3em 0;
+    position: relative;
+}
+article, aside, details, figcaption, figure, footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+.post > header {
+    display: -moz-flex;
+    display: -webkit-flex;
+    display: -ms-flex;
+    display: flex;
+    border-bottom: solid 1px rgba(160, 160, 160, 0.3);
+    left: -3em;
+    margin: -3em 0 3em 0;
+    position: relative;
+    width: calc(100% + 6em);
+}
+
+.post > header .title {
+    -moz-flex-grow: 1;
+    -webkit-flex-grow: 1;
+    -ms-flex-grow: 1;
+    flex-grow: 1;
+    -ms-flex: 1;
+    padding: 3.75em 3em 3.3em 3em;
+}
+
+#sidebar {
+    margin-right: 3em;
+    min-width: 22em;
+    width: 22em;
+
+}
+html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, img, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, b, u, i, center, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td, article, aside, canvas, details, embed, figure, figcaption, footer, header, hgroup, menu, nav, output, ruby, section, summary, time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+#intro .logo {
+    border-bottom: 0;
+    display: inline-block;
+    margin: 0 0 1em 0;
+    overflow: hidden;
+    position: relative;
+}
+a {
+    -moz-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    -webkit-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    -ms-transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    transition: color 0.2s ease, border-bottom-color 0.2s ease;
+    border-bottom: dotted 1px rgba(160, 160, 160, 0.65);
+    color: inherit;
+    text-decoration: none;
+}
+
+*, *:before, *:after {
+    -moz-box-sizing: border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing: border-box;
+}
+
+#sidebar > :first-child {
+    border-top: 0;
+    margin-top: 0;
+    padding-top: 0;
+}
+
+#sidebar > * {
+    border-top: solid 1px rgba(160, 160, 160, 0.3);
+    margin: 3em 0 0 0;
+    padding: 3em 0 0 0;
+}
+
+.blurb h2 {
+    font-size: 0.8em;
+    margin: 0 0 1.5em 0;
+}
+
+#wrapper {
+    padding: 3em;
+    transition: opacity 0.5s ease;
+    margin: 0 auto;
+    max-width: 100%;
+    opacity: 1;
+    width: 90em;
+}
+
+img{
+    width:352;
+    height:500;
+    vertical-align: middle;
+}
+
+ul.actions {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+ul {
+    list-style: disc;
+    margin: 0 0 2em 0;
+    padding-left: 1em;
+}
+ul, menu, dir {
+    display: block;
+    list-style-type: disc;
+    margin-block-start: 2em;
+    margin-block-end: 1em;
+    margin-inline-start: 0px;
+    margin-inline-end: 0px;
+    padding-inline-start: 40px;
+}
+
+#footer .icons {
+    color: #aaaaaa;
+}
+ul.icons {
+    cursor: default;
+    list-style: none;
+    padding-left: 0;
+}
+
+ul.icons li {
+    display: inline-block;
+    padding: 0 1em 0 0;
+}
+
+.post > header .title h2 {
+    font-weight: 900;
+    font-size: 1.5em;
+}
+.post > header .title > :last-child {
+    margin-bottom: 0;
+}
+header p {
+    font-family: "Raleway", Helvetica, sans-serif;
+    font-size: 0.7em;
+    font-weight: 400;
+    letter-spacing: 0.25em;
+    line-height: 5;
+    margin-top: -1em;
+    text-transform: uppercase;
+}
+p {
+    margin: 0 0 2em 0;
+}
+.round_icon{
+  width: 300;
+  height: 300;
+  display: flex;
+  border-radius: 50%;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+</style>
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+</head>
+<body>
+    <div id="root">
+                <div class="topnav">
+                        <a class="active" href="project1.html">YUANQI YANG</a>
+                        <a href="About.html">ABOUT</a>
+                        <a href="Resume.html">RESUME</a>
+                        <a href="projects.html">PROJECTS</a>
+                        <a href="Contact.html">CONTACT</a>
+                        <br>
+                </div>
+            <div id="wrapper">
+                    <div id="main" style="width:944px">
+                            <article class="post" id="about">
+                                <header>
+                                    <div class="title">
+                                        <h2>
+                                        <a href="Contact.html">Contact Me</a>
+                                        </h2>
+                                        <p>
+                                        
+                                        </p>
+                                        </div>
+                                    </header>
+                                    <P>
+                                        Feel free to get in touch. You can email me at:<br>
+                                        <a href="Mailto:yyang146@syr.edu">yyang146@syr.edu</a>
+                                    </P>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                    <br>
+                                </article>
+                        </div> 
+            <section id="sidebar">
+                    <section id="intro">
+                        <a class="logo" href="project1.html">
+                            <img src="_103158101_tha.jpg" class="round_icon" alt="" style="margin: 0 auto">
+                        </a>
+                        <header style="text-align: center">
+                            <h2>YUANQI YANG</h2>
+                            <p>
+                                <a href="Mailto:yyang146@syr.edu">yyang146@syr.edu</a>
+                            </p>
+                        </header>
+                </section>
+                <section class="blurb">
+                    <h2>ABOUT</h2>
+                    <p>
+                        Hi,I'm Yuanqi Yang.This is my personal website.I am a 
+                        <a href="https://www.syracuse.edu/">Syracuse University </a>
+                    Graduate of Engineering&Computer Science.Before Syracuse University, I studied in
+                        <a href="http://en.szu.edu.cn/">ShenZhen University </a>
+                    for my Bachelor in Telecommunication Engineering.
+                    </p>
+                    <ul class="actions">
+                        <li>
+                            <a class="button" href="Resume.html">LEARN MORE</a>
+                        </li>
+                    </ul>
+                </section>
+                <section id="footer">
+                    <ul class="icons">
+                        <li class="fab fa-github"></li>
+                        <li class="fab fa-facebook"></li>
+                        <li class="fab fa-instagram"></li>
+                        <li class="fab fa-twitter-square"></li>
+                    </ul>
+                    <p class="copyright">
+                           © Yuanqi Yang 
+                           <a href="yuki.html">Yuki.com</a>
+                    </p>
+                </section>
+
+            </section>
+           
+        </div>
+    </div>
+
+    
+</body>
+</html>
